@@ -1,0 +1,78 @@
+<div class="container mt-5 mb-5 ml-auto mr-auto f-bebas ">
+    <div class="myCard">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="LeftCtn">
+                    <form class="myForm text-center mr-1">
+
+                        <button type="button" class="close" aria-label="Close">
+                            <span [routerLink]="['/index']" href=""  aria-hidden="true">&times;</span>
+                        </button>
+
+                        <header>Cadastre-se</header>
+
+                        <div class="form-group d-flex justify-content-center">
+                            <i class="far fa-id-card mr-3 mt-3"></i>
+                            <input [(ngModel)]='usuario.nome' class="meuInput" type="text" placeholder="Nome" name="nome" id="nome" required>
+                        </div>
+                        <br>
+                        <div class="form-group d-flex justify-content-center">
+                            <i class="fas fa-user  mr-3 mt-3"></i>
+                            <input [(ngModel)]='usuario.usuario' class="meuInput" type="text" placeholder="Usuario" name="usuario" id="usuario" required>
+                        </div>
+        
+                        <div class="form-group mt-4 d-flex justify-content-center">
+                            <i class="fas fa-lock  mr-3 mt-3"></i>
+                            <input (input)='confirmeSenha($event)' class="meuInput" type="password" name="senha" id="senha" placeholder="senha" required>
+                        </div>
+                        
+                        <div class="form-group mt-4 d-flex justify-content-center">
+                            <i class="fas fa-redo-alt mr-3 mt-3"></i>
+                            <input [(ngModel)]='usuario.senha' class="meuInput" type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Repita a Senha" required>
+                        </div>
+            
+                        <div class="form-group mt-4 d-flex justify-content-center">
+                            <i class="fas fa-file-import mr-3 mt-3"></i>
+                            <input [(ngModel)]='usuario.documento' class="meuInput" type="text" name="documento" id="documento" placeholder="Link Documento" required>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="tipo">Tipo de Usuário</label>
+                            <select (change)='tipoUser($event)' name="tipo" id="tipo" class="form-control">
+                                <option>Selecione um tipo de usuário:</option>
+                                <option value="cliente">Cliente</option>
+                                <option value="adm">Administrador</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mt-4 d-flex justify-content-center">
+                            <label class="justify-content-center" for="">
+                                <input id="checkLgpd" name="checkLgpd" type="checkbox" required>
+                                <small> concordo com os <a type="text" class="link" data-toggle="modal" data-target="#exampleModalCenter"> Termos & Condições</a></small>
+                            </label>
+                        </div>
+
+                        <input (click)='cadastrar()' type="submit" class="butt mt-4 mb-2" value="Cadastrar">
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="RightCtn">
+                    <div class="box text-center text-white">
+                    <header>
+                        <img class="" src="../../assets/img/icon.png" alt="" width="200px" height="200px">
+                        <h1>Anjos do Preço</h1>
+                        <h2>Seja Bem Vindo ♥</h2>
+                    </header>
+                    <p class="mt-2"> 
+                        O projeto tem como objetivo vender produtos baseado na condição financeira atual do cliente, 
+                        utilizando um método de validação através da renda.
+                    </p>       
+                    <input type="button" class="mt-3 butt-out " value="Saiba Mais">               
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>

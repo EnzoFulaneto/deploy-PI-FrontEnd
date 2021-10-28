@@ -1,0 +1,12 @@
+#img-bg{
+    background-image: url('https://images.unsplash.com/photo-1543083477-4f785aeafaa9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFya2V0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
+    min-height: 580px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+hr{
+    border: solid 2px;
+    border-radius: 5%;
+}

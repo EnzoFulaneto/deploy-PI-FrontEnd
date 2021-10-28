@@ -1,0 +1,126 @@
+<div class="container-fluid">
+    <nav id="menu" class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand logo" href="#">Olá, {{nome}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon c"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="container-fluid navbar-nav d-flex justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link bts ml-1 mr-1" href="#"><i class="fas fa-shopping-cart"></i> Carrinho </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bts ml-1 mr-1" href="#"><i class="fas fa-user-cog"></i> Perfil</a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="banner container-fluid pt-5 pb-5 ">
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-sm-12 d-flex justify-content-center container">
+                <div class="mb-3 border-r img-fluid">
+                   <img src="../../assets/img/Product.png" alt="" width="200px" height="200px">
+                </div>
+                <div class="mb-3 border-r img-fluid">
+                    <img src="../../assets/img/money.png" alt="" width="200px" height="200px">
+                </div>
+                <div class="mb-3 border-r img-fluid">
+                    <img src="../../assets/img/Productc.png" alt="" width="200px" height="200px">
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-sm-2">
+                <div>
+                    <h1></h1>
+                </div>
+            </div>
+
+            <div class="col-sm-8 d-flex justify-content-center">
+                <div class=" mb-3">
+                    <h1 class="f-titulo fs-100 ff-b d-flex justify-content-center mt-2 text-white text-center font-weight-bolder">Anjos Do Preço</h1>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-center">
+                <div class="mt-2">
+                   
+            
+        <!-- Botão para acionar modal -->
+        
+        <button *ngIf='auth.adm()' type="button" class="btn btn-primary mr-5" data-toggle="modal" data-target="#novoProduto">
+        Cadastrar novo produto
+        </button>      
+        
+
+        
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Modal  PRODUTO-->
+  <div class="modal fade" id="novoProduto" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TituloModalCentralizado">Cadastro de produtos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        
+            <div class="form-group">
+                <label for="produto">Produto</label>
+                <input [(ngModel)]='produto.produto' type="text" class="form-control" id="titulo" placeholder="Insira o nome do produto">
+            </div>
+
+            <div class="form-group">
+                <label for="foto">Foto</label>
+                <input [(ngModel)]='produto.foto' type="text" class="form-control" id="foto" placeholder="Insira o link da foto">
+            </div>
+            
+            <div class="form-group">
+                <label for="preço">Preço</label>
+                <input [(ngModel)]='produto.preco' type="number" class="form-control" id="preço" placeholder="Insira o preço do produto em R$">
+            </div>
+
+            <div class="form-group">
+                <label for="produto">Categoria</label>
+                <select name="categoria" id="categoria" placeholder="Escolha uma categoria" class="form-control" [(ngModel)]='produto.categoria'>
+                    <option>-- Selecione uma categoria --</option>
+                    <option value="alimento">Alimentos</option>
+                    <option value="eletrodomesticos">Eletrodomesticos</option>
+                    <option value="jogos">Jogos</option>
+                    <option value="celulares">Celulares</option>
+                </select>
+            </div>
+            
+
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Voltar</button>
+          <button type="button" class="btn btn-primary" (click)='publicarProduto()' data-dismiss="modal">Cadastrar Produto</button>
+        </div>
+      </div>
+    </div>
+  </div>

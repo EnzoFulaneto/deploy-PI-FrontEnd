@@ -1,0 +1,12 @@
+
+.fs{
+    font-size:40px;
+}
+
+.color{
+    color: black;
+}
+
+.color:hover{
+    color: blueviolet;
+}

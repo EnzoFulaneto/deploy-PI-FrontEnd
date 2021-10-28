@@ -1,0 +1,140 @@
+<div class="container-fluid">
+    <nav id="menu" class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand logo" href="#">ADP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon c"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+                <ul class="container-fluid navbar-nav d-flex justify-content-end">
+                    <li class="nav-item">
+                        <a routerLink='/cadastrar' href="#" class="nav-link bts mb-1 ml-1 mr-1">Cadastrar <i class="fas fa-user-plus ml-1"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bts ml-1 mr-1" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" href="#">Entrar <i class="fas fa-sign-in-alt"></i></a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="banner container-fluid pt-5 pb-5 ">
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-sm-12 d-flex justify-content-center container">
+                <div class="mb-3 border-r img-fluid">
+                   <img src="../../assets/img/Product.png" alt="" width="200px" height="200px">
+                </div>
+                <div class="mb-3 border-r img-fluid">
+                    <img src="../../assets/img/icon.png" alt="" width="200px" height="200px">
+                </div>
+                <div class="mb-3 border-r img-fluid">
+                    <img src="../../assets/img/Productc.png" alt="" width="200px" height="200px">
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-sm-2">
+                <div>
+                    <h1></h1>
+                </div>
+            </div>
+
+            <div class="col-sm-8 d-flex justify-content-center">
+                <div class=" mb-3">
+                    <h1 class="f-titulo fs-100 ff-b d-flex justify-content-center mt-2 text-white text-center font-weight-bolder">Anjos Do Preço</h1>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-center">
+                <div class="mt-2">
+                   
+        
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- MODAL Entrar-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bd-radius">
+            <div class="modal-header bg-dark text-light">
+                <h1 class="text-center modal-title">Entrar <i class="fas fa-sign-in-alt"></i></h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-dark text-light d-flex justify-content-center">
+                
+                <form>
+                    <div class="">
+                        
+                        <div class="form-group">
+                            <label for="usuario">Usuario</label>
+                            <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario"
+                                placeholder="Seu usuario">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
+                            placeholder="Sua senha">
+                        </div>
+                        
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success ml-1" (click)='entrar()' data-dismiss="modal">Entrar</button>
+                        </div>
+                        
+                        <hr class="mt-5 mb-5">
+
+                        <p class="text-center">Não tem uma conta?
+                        <a routerLink="/cadastrar">Cadastre-se</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>        
+</div>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Termos e condições gerais de uso e/ou de venda</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Por meio de seus termos e condições gerais de uso e/ou de venda, um site ou um aplicativo explica aos usuários quais são as condições de utilização do serviço disponibilizado através de sua página ou programa, seja ele gratuito ou pago. Além de informar o usuário sobre a necessidade de cadastro ou sobre os elementos protegidos por direitos autorais, este instrumento determina, ainda, as responsabilidades de cada uma das partes - editor (pessoa que mantém o site ou aplicativo) e usuário -, em relação ao uso do serviço.
+
+            Nos casos em que o site ou o aplicativo colocar à venda produtos ou serviços, este documento virá, também, complementado pelas condições gerais de venda, que regularão os detalhes desta transação, tais como as formas de pagamento, a entrega e a política de trocas e devoluções.
+            
+            Este documento, ainda, estabelecerá o limite mínimo de idade que o usuário do site deve ter para utilizá-lo. Nos casos em que houver a possibilidade ou a necessidade de cadastro prévio ao acesso a todas ou a parte das funcionalidades do site ou aplicativo, será possível definir, ainda, a idade mínima para cadastro.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>

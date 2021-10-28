@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.f-bebas{
+    font-family: 'Bebas Neue', cursive;
+}
+.fs-50{
+    font-size: 50px;
+}
+.fs-25{
+    font-size: 25px;
+}
+
+/**/
+
+
+
+
+/*Bordas*/
+.b-radius{
+    border-radius: 10%;
+}
+
+
+
+.bg-livros{
+    background-color: #20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+}
+.bg-livros2{
+    background-color: #7ee8fa;
+    background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+}
+
+
+.border-r{
+
+    border-radius: 100%;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+
+}
+.border-r:hover{
+    background-color: #6b0f1a;
+    background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);        
+}
+
+html{
+    scroll-behavior: smooth;
+}

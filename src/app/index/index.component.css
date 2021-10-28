@@ -1,0 +1,46 @@
+/*Barra de pesquisa*/
+
+/**/
+
+/*Barra de Categorias*/
+
+/*Fio*/
+
+/*Formatação*/
+.fs-25{
+    font-size: 25px;
+}
+.fs-100{
+    font-size: 100%;
+    font-size: 3em;
+}
+.ff-b{
+    font-family: 'Bebas Neue', cursive;
+}
+.f-color{
+    color: #DAF0EE;
+}
+.f-titulo{
+    background: -webkit-linear-gradient(#9795ef, #f9c5d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+
+/*Fim - Formtação*/
+
+/*Fundo*/
+.back
+{
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    border-radius: 30px;
+    height: 50px;
+    width: 250px;
+}
+.background
+{
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+}
+/**/
